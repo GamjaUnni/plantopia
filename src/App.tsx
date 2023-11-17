@@ -1,7 +1,9 @@
+import Home from "./components/pages/HomePage/HomePage";
+
 function App() {
     return (
         <>
-            <input type="text" />
+            <Home />
         </>
     );
 }
