@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { nanoid } from "nanoid";
 import Calendar from "react-calendar";
 import {
@@ -153,9 +153,9 @@ const CalendarPage = () => {
         <div className="calendar_page">
             <header className="sub_header">
                 <strong>물주기 기록</strong>
-                <Link to="/" className="close_btn">
+                <button className="close_btn">
                     <span className="hide">닫기</span>
-                </Link>
+                </button>
             </header>
             <main className="calendar_container">
                 {loading ? (

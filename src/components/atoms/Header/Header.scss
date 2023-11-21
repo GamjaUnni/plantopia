@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 2rem;
+
+    .main_logo {
+        height: 2.4rem;
+
+        img {
+            height: 2.4rem;
+        }
+    }
+
+    .calendar_btn,
+    .bell_btn {
+        width: 2.6rem;
+        height: 2.6rem;
+        img {
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+    }
+
+    .bell_btn {
+        margin-left: 1.2rem;
+    }
+}
