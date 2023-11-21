@@ -117,16 +117,7 @@ legend {
 hr {
     display: none;
 }
-main,
-header,
-section,
-nav,
-footer,
-aside,
-article,
-figure {
-    display: block;
-}
+
 a {
     color: #22264c;
     text-decoration: none;
@@ -183,7 +174,7 @@ input[type="email"],
 input[type="number"],
 input[type="password"],
 input[type="text"] {
-    padding: 1.2rem;
+    padding: 1.2rem 0;
     height: 4.1rem;
     line-height: 4.1rem;
 }
@@ -228,4 +219,7 @@ select::-ms-expand {
 input:focus {
     border-bottom: 1px solid #1fb0ad;
     outline: none;
+}
+.container {
+    padding: 0 2rem;
 }
