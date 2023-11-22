@@ -5,6 +5,7 @@ import CalendarPage from "@components/pages/CalendarPage/CalendarPage";
 import LoginPage from "@components/pages/LoginPage/LoginPage";
 import MyPage from "@components/pages/MyPage/MyPage";
 import MyInfoPage from "@components/pages/MyPage/MyInfoPage";
+import DictPage from "@components/pages/DictPage/DictPage";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="/" element={<Layout />}>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/mypage" element={<MyPage />} />
+                <Route path="/dictionary" element={<DictPage />} />
             </Route>
             <Route path="/mypage/info" element={<MyInfoPage />} />
             <Route path="/calendar" element={<CalendarPage />} />

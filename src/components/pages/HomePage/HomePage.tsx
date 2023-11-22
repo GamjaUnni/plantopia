@@ -3,14 +3,12 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
 
 import WeatherRain from "@/assets/images/weather/weather_rain.png";
 import IconWatering from "@/assets/images/icons/icon_watering.png";
 import Plant1 from "@/assets/images/plant1.png";
 import Plant2 from "@/assets/images/plant2.png";
+import Plant3 from "@/assets/images/plant3.jpg";
 
 import "./HomePage.scss";
 
@@ -27,8 +25,8 @@ const plants = [
     },
     {
         no: 3,
-        src: Plant2,
-        name: "이상해씨2",
+        src: Plant3,
+        name: "장미",
     },
     {
         no: 4,
@@ -64,7 +62,7 @@ const HomePage = () => {
                         <li>
                             <div>
                                 <strong>비 조금 36˚</strong>
-                                <span>36˚ | 27˚</span>
+                                <span>36˚&nbsp;&nbsp;|&nbsp;&nbsp;27˚</span>
                             </div>
                         </li>
                         <li>

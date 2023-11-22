@@ -3,6 +3,12 @@ main {
     // flex-direction: column;
     // justify-content: center;
     // flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 11.5rem);
+    margin-bottom: 5.7rem;
+
     .info_wrap {
         position: relative;
 
@@ -30,6 +36,10 @@ main {
                 strong {
                     margin-right: 0.8rem;
                 }
+                span {
+                    color: #9b9fb1;
+                    font-size: 1.2rem;
+                }
             }
         }
     }
@@ -42,12 +52,14 @@ main {
             height: 26rem;
             border-radius: 50%;
             box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.1);
+            // border: 4px solid #cbe7d9;
             img {
                 position: absolute;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 24rem;
+                height: 24rem;
                 overflow: hidden;
                 border-radius: 50%;
             }
@@ -173,6 +185,8 @@ main {
                             top: 50%;
                             transform: translate(-50%, -50%);
                             width: 7rem;
+                            height: 7rem;
+                            border-radius: 50%;
                         }
                     }
                     p {
