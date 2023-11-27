@@ -37,6 +37,48 @@
         }
     }
 
+    .search_list {
+        padding: 1.4rem 2rem 0;
+        li {
+            display: flex;
+            align-items: center;
+
+            &.no_data {
+                padding: 2.8rem 0;
+                flex-direction: column;
+                p {
+                    padding-bottom: 4.2rem;
+                    font-size: 1.5rem;
+                }
+                a {
+                    color: #9b9fb1;
+                    font-size: 1.2rem;
+                    border-bottom: 1px solid #9b9fb1;
+                }
+            }
+
+            img {
+                width: 6.4rem;
+                height: 6.4rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            > div {
+                padding-left: 2.4rem;
+                strong {
+                    display: block;
+                    padding-bottom: 0.8rem;
+                }
+                span {
+                    color: #9b9fb1;
+                }
+            }
+        }
+        li ~ li {
+            margin-top: 1.8rem;
+        }
+    }
+
     .slide_wrap {
         strong {
             display: block;
@@ -99,6 +141,157 @@
         &.slide04 {
             strong {
                 background-image: url("../../../assets/images/icons/icon_slide04.png");
+            }
+        }
+    }
+}
+
+/* 식물 상세 */
+.dict_detail {
+    background-color: #f8f8fa;
+
+    .dict_detail_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.8rem 3.2rem 2rem;
+        background: #fff;
+
+        img {
+            width: 14.8rem;
+            height: 14.8rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        span {
+            display: block;
+            padding-top: 2rem;
+            color: #b8b8b8;
+            font-size: 1.2rem;
+        }
+        strong {
+            display: block;
+            padding-top: 0.8rem;
+            padding-bottom: 1.2rem;
+            font-size: 1.5rem;
+        }
+
+        .register_btn {
+            padding: 1.4rem 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d6d6d6;
+            border-radius: 2.6rem;
+            i {
+                margin-right: 1.2rem;
+                display: inline-block;
+                width: 2rem;
+                height: 2.4rem;
+                background: url("../../../assets/images/icons/icon_register.png")
+                    no-repeat center / contain;
+            }
+        }
+    }
+
+    .dict_card {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .card ~ .card {
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            filter: drop-shadow(0px 2px 16px rgba(0, 0, 0, 0.08));
+            border-radius: 1rem;
+
+            strong {
+                padding: 1.4rem;
+                display: block;
+                border-bottom: 1px solid #f8f8fa;
+            }
+            ul {
+                padding: 1.6rem 1.4rem;
+                li ~ li {
+                    margin-top: 1.4rem;
+                }
+                li {
+                    font-size: 1.2rem;
+                    label {
+                        display: inline-block;
+                        width: 10.4rem;
+                        padding-left: 2.9rem;
+                        background-size: 2.1rem;
+                        background-position: left center;
+                        background-repeat: no-repeat;
+
+                        &.category {
+                            background-image: url("../../../assets/images/icons/dict_category.png");
+                        }
+                        &.humidity {
+                            background-image: url("../../../assets/images/icons/dict_humidity.png");
+                        }
+                        &.management {
+                            background-image: url("../../../assets/images/icons/dict_management.png");
+                        }
+                        &.pest {
+                            background-image: url("../../../assets/images/icons/dict_pest.png");
+                        }
+                    }
+                }
+            }
+
+            .box_wrap {
+                padding: 1.6rem 1.4rem;
+                display: flex;
+                justify-content: space-around;
+                text-align: center;
+                .box {
+                    p {
+                        padding-bottom: 1.4rem;
+                        font-size: 1.2rem;
+                    }
+                    em {
+                        font-weight: 700;
+                    }
+                    span ~ span {
+                        margin-left: 1rem;
+                    }
+                    span {
+                        display: inline-block;
+
+                        &.sun {
+                            width: 2rem;
+                            height: 2rem;
+                            background: url("../../../assets/images/icons/icon_sun.png")
+                                no-repeat center / contain;
+                        }
+                        &.sun.on {
+                            background: url("../../../assets/images/icons/icon_sun_on.png")
+                                no-repeat center / contain;
+                        }
+
+                        &.water {
+                            width: 1em;
+                            height: 1.6rem;
+                            background: url("../../../assets/images/icons/icon_water.png")
+                                no-repeat center / contain;
+                        }
+                        &.water.on {
+                            background: url("../../../assets/images/icons/icon_water_on.png")
+                                no-repeat center / contain;
+                        }
+                    }
+                }
+
+                .tip {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    text-align: left;
+                }
             }
         }
     }

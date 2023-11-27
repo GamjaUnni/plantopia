@@ -7,6 +7,7 @@ import MyPage from "@components/pages/MyPage/MyPage";
 import MyInfoPage from "@components/pages/MyPage/MyInfoPage";
 import DictPage from "@components/pages/DictPage/DictPage";
 import DictSearchPage from "@components/pages/DictPage/DictSearchPage";
+import DictDetailPage from "@components/pages/DictPage/DictDetailPage";
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/mypage/info" element={<MyInfoPage />} />
             <Route path="/dictionary/search" element={<DictSearchPage />} />
+            <Route path="/dictionary/detail" element={<DictDetailPage />} />
         </Routes>
     );
 }
