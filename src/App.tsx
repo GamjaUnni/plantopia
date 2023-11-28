@@ -8,6 +8,7 @@ import MyInfoPage from "@components/pages/MyPage/MyInfoPage";
 import DictPage from "@components/pages/DictPage/DictPage";
 import DictSearchPage from "@components/pages/DictPage/DictSearchPage";
 import DictDetailPage from "@components/pages/DictPage/DictDetailPage";
+import DiaryPage from "@components/pages/DiaryPage/DiaryPage";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/mypage" element={<MyPage />} />
                 <Route path="/dictionary" element={<DictPage />} />
+                <Route path="/diary" element={<DiaryPage />} />
             </Route>
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/mypage/info" element={<MyInfoPage />} />
