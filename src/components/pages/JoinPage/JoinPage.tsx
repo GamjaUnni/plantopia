@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./LoginPage.scss";
 
-const LoginPage = () => {
+const JoinPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [nickname, setNickname] = useState("");
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -15,6 +14,11 @@ const LoginPage = () => {
 
         if (name === "password") {
             setPassword(value);
+            return;
+        }
+
+        if (name === "nickname") {
+            setNickname(value);
             return;
         }
     };
@@ -30,6 +34,10 @@ const LoginPage = () => {
             alert("비밀번호를 입력하세요");
             return;
         }
+        if (!nickname) {
+            alert("닉네임을 입력하세요");
+            return;
+        }
     };
 
     return (
@@ -40,7 +48,7 @@ const LoginPage = () => {
                 </h1>
                 <h2>
                     <div>
-                        간편하게 로그인하고
+                        간편하게 가입하고
                         <br />
                         <em>다양한 서비스를 이용하세요.</em>
                     </div>
@@ -65,13 +73,21 @@ const LoginPage = () => {
                         onChange={onInputChange}
                         placeholder="비밀번호를 입력해주세요."
                     />
+                    <label htmlFor="inpPwd" className="mar_top32">
+                        닉네임
+                    </label>
+                    <input
+                        type="text"
+                        name="nickname"
+                        value={nickname}
+                        onChange={onInputChange}
+                        placeholder="닉네임을 입력해주세요."
+                    />
                     <button type="submit" className="submit_btn">
-                        로그인
+                        등록
                     </button>
-                    <Link to="/join" className="join_btn">
-                        <span>회원가입</span>
-                    </Link>
                 </form>
+
                 <div className="oauth_box">
                     <p>SNS 계정으로 로그인하기</p>
                     <ul>
@@ -102,5 +118,4 @@ const LoginPage = () => {
         </main>
     );
 };
-
-export default LoginPage;
+export default JoinPage;
