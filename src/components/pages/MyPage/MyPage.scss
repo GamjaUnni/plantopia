@@ -242,6 +242,7 @@
                 no-repeat center / contain;
         }
         ul {
+            display: none;
             z-index: 99;
             position: absolute;
             width: 8rem;
@@ -259,6 +260,9 @@
                 border-top: 1px solid #f7f8f7;
                 color: #c17369;
             }
+        }
+        ul.on {
+            display: block;
         }
     }
 }

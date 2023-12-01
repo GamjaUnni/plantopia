@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -9,6 +10,7 @@ import Plant5 from "@/assets/images/plant5.jpg";
 import "./DiaryPage.scss";
 
 const DiaryDetailPage = () => {
+    const [isOff, setIsOff] = useState(false);
     return (
         <div className="wrapper">
             <main className="diary empty_footer">
@@ -18,13 +20,23 @@ const DiaryDetailPage = () => {
                     </button>
                     <strong>다이어리</strong>
                     <div className="more_wrap">
-                        <button className="more_btn">
+                        <button
+                            onClick={() => setIsOff((prev) => !prev)}
+                            className="more_btn"
+                        >
                             <span className="hide">더보기</span>
                         </button>
-                        <ul>
-                            <li className="modify">수정</li>
-                            <li className="delete">삭제</li>
-                        </ul>
+                        {isOff ? (
+                            <ul className="on">
+                                <li className="modify">수정</li>
+                                <li className="delete">삭제</li>
+                            </ul>
+                        ) : (
+                            <ul>
+                                <li className="modify">수정</li>
+                                <li className="delete">삭제</li>
+                            </ul>
+                        )}
                     </div>
                 </header>
                 <section className="diary_slide">
