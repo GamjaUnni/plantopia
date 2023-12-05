@@ -151,13 +151,13 @@ const CalendarPage = () => {
 
     return (
         <div className="calendar_page">
-            <header className="sub_header">
-                <strong>물주기 기록</strong>
-                <button className="close_btn">
-                    <span className="hide">닫기</span>
-                </button>
-            </header>
-            <main className="calendar_container">
+            <main className="calendar_container empty_footer">
+                <header className="sub_header">
+                    <strong>물주기 기록</strong>
+                    <button className="close_btn">
+                        <span className="hide">닫기</span>
+                    </button>
+                </header>
                 {loading ? (
                     <>
                         <section className="calendar_wrap container">

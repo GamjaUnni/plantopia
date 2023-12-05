@@ -12,6 +12,7 @@ import DiaryPage from "@components/pages/DiaryPage/DiaryPage";
 import JoinPage from "@components/pages/JoinPage/JoinPage";
 import JoinComplete from "@components/pages/JoinPage/JoinComplete";
 import DiaryDetailPage from "@components/pages/DiaryPage/DiaryDetailPage";
+import DiaryWritePage from "@components/pages/DiaryPage/DiaryWritePage";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/dictionary/search" element={<DictSearchPage />} />
             <Route path="/dictionary/detail" element={<DictDetailPage />} />
             <Route path="/diary/detail" element={<DiaryDetailPage />} />
+            <Route path="/diary/write" element={<DiaryWritePage />} />
         </Routes>
     );
 }

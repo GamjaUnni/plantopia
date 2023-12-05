@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import profile from "@/assets/images/profile.png";
 
@@ -24,14 +24,13 @@ const MyInfoPage = () => {
 
     return (
         <div className="my_info_page">
-            <header className="sub_header">
-                <button className="back_btn">
-                    <span className="hide">뒤로가기</span>
-                </button>
-                <strong>내 정보</strong>
-            </header>
-
-            <main className="my_info_container">
+            <main className="my_info_container empty_footer">
+                <header className="sub_header">
+                    <button className="back_btn">
+                        <span className="hide">뒤로가기</span>
+                    </button>
+                    <strong>내 정보</strong>
+                </header>
                 <section className="profile_section container">
                     <div className="profile">
                         <img src={profile} alt="profile" />

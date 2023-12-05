@@ -153,4 +153,140 @@
             color: #979797;
         }
     }
+
+    .img_file_wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2.9rem;
+            border: 1px solid #eee;
+            width: 7.2rem;
+            height: 7.2rem;
+            border-radius: 0.4rem;
+            font-size: 1rem;
+            color: #9b9fb1;
+            background: url("../../../assets/images/icons/icon_file.png")
+                no-repeat top 1.4rem center / 6.2rem;
+            cursor: pointer;
+        }
+
+        .img_wrap {
+            margin-left: 1.4rem;
+            position: relative;
+            img {
+                width: 7.2rem;
+                height: 7.2rem;
+                border-radius: 0.4rem;
+                overflow: hidden;
+            }
+            button {
+                position: absolute;
+                right: -1rem;
+                top: -1rem;
+                width: 2.2rem;
+                height: 2.2rem;
+                background: url("../../../assets/images/icons/icon_delete.png")
+                    no-repeat center / contain;
+            }
+        }
+    }
+
+    .form_wrap {
+        display: flex;
+        flex-direction: column;
+        flex: 1 auto;
+        border-top: 1px solid #f7f8f7;
+        input[type="text"] {
+            padding: 2rem;
+            width: 100%;
+            height: 5.6rem;
+            line-height: 5.6rem;
+            border-bottom: none;
+            font-size: 2rem;
+            &::placeholder {
+                font-size: 2rem;
+                color: #9b9fb1;
+            }
+        }
+
+        .select_box {
+            display: flex;
+            flex-direction: column;
+            flex: 1 auto;
+            position: relative;
+            .select {
+                padding: 2rem;
+                width: 100%;
+                text-align: left;
+                background: #f9f9f9
+                    url("../../../assets/images/icons/icon_select.png")
+                    no-repeat center right 2rem / 1.3rem;
+                color: #9b9fb1;
+                font-size: 1.5rem;
+                &.on {
+                    background-image: url("../../../assets/images/icons/icon_select_on.png");
+                }
+            }
+            ul {
+                display: none;
+                position: absolute;
+                top: 5.8rem;
+                width: 100%;
+                height: 22rem;
+                overflow-y: scroll;
+                padding: 0 2rem 1.1rem;
+                border-top: 1px solid #f7f8f7;
+                background-color: #f9f9f9;
+                &.on {
+                    display: block;
+                }
+                li {
+                    padding: 1.1rem;
+                }
+
+                .label {
+                    display: inline-block;
+                    padding-left: 2.6rem;
+                    height: 2.4rem;
+                    line-height: 2.4rem;
+                    font-weight: 400;
+                    cursor: pointer;
+                    color: #9b9fb1;
+                }
+                .ch_check + .label {
+                    background: url("../../../assets/images/icons/checkbox_off.png")
+                        no-repeat left center / 1.6rem;
+                }
+                .ch_check:checked + .label {
+                    background-image: url("../../../assets/images/icons/checkbox_on.png");
+                    color: #1fb0ad;
+                }
+            }
+        }
+
+        textarea {
+            padding: 2rem;
+            resize: none;
+            width: 100%;
+            height: calc(100vh - 34.1rem);
+            font-size: 1.5rem;
+            &::placeholder {
+                font-size: 1.5rem;
+                color: #9b9fb1;
+            }
+        }
+    }
+
+    .mint_btn {
+        width: 100%;
+        height: 5rem;
+        line-height: 5rem;
+        background-color: #1fb0ad;
+        color: #fff;
+    }
 }
