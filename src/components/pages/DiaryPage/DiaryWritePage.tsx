@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./DiaryPage.scss";
+import { nanoid } from "nanoid";
 
 // import Plant5 from "@/assets/images/plant5.jpg";
 
@@ -77,6 +78,16 @@ const DiaryWritePage = () => {
         });
     };
 
+    const dropThumbnail = (idx: number) => {
+        if (idx > -1) {
+            setThumbnailImage((prev) => {
+                const copy = [...prev];
+                copy.splice(idx, 1);
+                return copy;
+            });
+        }
+    };
+
     return (
         <div className="wrapper" onClick={closeOption}>
             <main className="diary empty_footer">
@@ -92,13 +103,14 @@ const DiaryWritePage = () => {
                         id="file"
                         className="hide"
                         onChange={handleFileChange}
+                        accept="image/*"
                     />
                     <label htmlFor="file">{thumbnailImage?.length} / 3</label>
 
-                    {thumbnailImage.map((thumbnail) => (
-                        <div className="img_wrap">
+                    {thumbnailImage.map((thumbnail, idx) => (
+                        <div className="img_wrap" key={nanoid()}>
                             <img src={thumbnail} alt="thumbnail" />
-                            <button>
+                            <button onClick={() => dropThumbnail(idx)}>
                                 <span className="hide">삭제</span>
                             </button>
                         </div>
