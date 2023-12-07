@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Plant4 from "@/assets/images/plant4.png";
 
-const DictDetailPage = () => {
+const PlantDetailPage = () => {
     return (
         <div className="wrapper">
-            <main className="dict_detail empty_footer">
+            <main className="plant dict_detail empty_footer">
                 <header className="sub_header">
                     <button className="back_btn">
                         <span className="hide">뒤로가기</span>
@@ -11,12 +12,16 @@ const DictDetailPage = () => {
                     <strong>식물 상세</strong>
                 </header>
 
+                <section className="container main_tag">
+                    <span className="main_plant_tag">메인 식물</span>
+                </section>
+
                 <section className="dict_detail_main">
                     <img src={Plant4} alt="식물 이미지" />
                     <span className="main_en_name">Philodendron Congo</span>
                     <strong>필로덴드론 콩고</strong>
                     <button className="register_btn">
-                        <i></i>내 식물로 등록
+                        <i></i>식물 정보 수정하기
                     </button>
                 </section>
 
@@ -76,8 +81,14 @@ const DictDetailPage = () => {
                         </div>
                     </div>
                 </section>
+
+                <section className="dict_move container">
+                    <Link to="/dictionary">
+                        식물도감에서 이 식물 정보 더 알아보기!
+                    </Link>
+                </section>
             </main>
         </div>
     );
 };
-export default DictDetailPage;
+export default PlantDetailPage;

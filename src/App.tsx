@@ -13,6 +13,8 @@ import JoinPage from "@components/pages/JoinPage/JoinPage";
 import JoinComplete from "@components/pages/JoinPage/JoinComplete";
 import DiaryDetailPage from "@components/pages/DiaryPage/DiaryDetailPage";
 import DiaryWritePage from "@components/pages/DiaryPage/DiaryWritePage";
+import PlantPage from "@components/pages/PlantPage/PlantPage";
+import PlantDetailPage from "@components/pages/PlantPage/PlantDetailPage";
 
 function App() {
     return (
@@ -25,6 +27,7 @@ function App() {
                 <Route path="/mypage" element={<MyPage />} />
                 <Route path="/dictionary" element={<DictPage />} />
                 <Route path="/diary" element={<DiaryPage />} />
+                <Route path="/myplant" element={<PlantPage />} />
             </Route>
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/mypage/info" element={<MyInfoPage />} />
@@ -32,6 +35,7 @@ function App() {
             <Route path="/dictionary/detail" element={<DictDetailPage />} />
             <Route path="/diary/detail" element={<DiaryDetailPage />} />
             <Route path="/diary/write" element={<DiaryWritePage />} />
+            <Route path="/myplant/detail" element={<PlantDetailPage />} />
         </Routes>
     );
 }
