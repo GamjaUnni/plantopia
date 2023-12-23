@@ -1,16 +1,14 @@
 import {Outlet} from "react-router-dom";
+import Toast from "@components/atoms/Toast/Toast.tsx";
 
 
 const Wrapper = () => {
-    return (
-        <>
-            <div>
-                Toast
-            </div>
-
-          <Outlet />
-        </>
-    );
+  return (
+    <>
+      <Toast />
+      <Outlet />
+    </>
+  );
 };
 
 export default Wrapper;

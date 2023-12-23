@@ -1,3 +1,22 @@
 .toast{
   position: fixed;
+  left:2rem;
+  top: 2rem;
+  padding: 1.4rem 1.6rem;
+  width:calc(100% - 4rem);
+  border-radius: 1.4rem;
+  background: rgba(245, 245, 245, 0.8);
+  backdrop-filter: blur(6px);
+  transform: translateY(calc(-100% - 2rem));
+  transition: transform 0.3s;
+  z-index:999;
+
+  &.open{
+    transform: translateY(0);
+  }
+
+  strong {
+    display: block;
+    padding-bottom: .6rem;
+  }
 }

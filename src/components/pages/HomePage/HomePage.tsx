@@ -11,6 +11,7 @@ import Plant2 from "@/assets/images/plant2.png";
 import Plant3 from "@/assets/images/plant3.jpg";
 
 import "./HomePage.scss";
+import { ToastHooks } from '@/hooks/ToastHooks.ts';
 
 const plants = [
     {
@@ -46,10 +47,14 @@ interface MainPlantType {
 }
 
 const HomePage = () => {
+    const {setToastMessage} = ToastHooks();
     const [mainPlant, setMainPlant] = useState<MainPlantType>(plants[0]);
     const changeMain = (src: string, name: string) => {
         setMainPlant({ src, name });
     };
+    const giveWater = () => {
+        setToastMessage("물주가를 완료 했습니다.")
+    }
 
     return (
         <div className="wrapper">
@@ -79,7 +84,7 @@ const HomePage = () => {
                 <section className="main_wrap">
                     <div className="main_plant">
                         <img src={mainPlant?.src} alt="main plant" />
-                        <button className="watering_btn">
+                        <button className="watering_btn" onClick={giveWater}>
                             <strong>물주기</strong>
                             <img src={IconWatering} />
                         </button>
