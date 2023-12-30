@@ -4,6 +4,10 @@ import Plant4 from "@/assets/images/plant4.png";
 
 const DictSearchPage = () => {
     const [search, setSearch] = useState<string>("");
+    const onSearch = () => {
+        console.log("search", search);
+    }
+
     return (
         <div className="wrapper">
             <main className="search empty_footer">
@@ -21,8 +25,8 @@ const DictSearchPage = () => {
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <button>
-                            <span className="hide">검색</span>
+                        <button onClick={onSearch}>
+                            <span  className="hide">검색</span>
                         </button>
                     </div>
                 </section>
